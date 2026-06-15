@@ -86,10 +86,7 @@
                         <span id="shortlist-count" class="hidden md:inline bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-0.5 rounded-full font-bold">3</span>
                     </button>
 
-                    <button onclick="switchTab('blueprint')" id="tab-btn-blueprint" class="w-full flex items-center gap-4 px-3 py-3 rounded-xl transition-all group text-amber-400 hover:bg-amber-400/10 hover:text-amber-300 font-bold border border-amber-500/10">
-                        <span class="w-8 flex justify-center"><i class="fa-solid fa-cubes text-lg"></i></span>
-                        <span class="hidden md:inline">App Blueprint</span>
-                    </button>
+
                 </nav>
             </div>
 
@@ -276,6 +273,15 @@
                                     <option value="ESP">Spain 🇪🇸</option>
                                     <option value="BRA">Brazil 🇧🇷</option>
                                     <option value="USA">United States 🇺🇸</option>
+                                    <option value="GER">Germany 🇩🇪</option>
+                                    <option value="ITA">Italy 🇮🇹</option>
+                                    <option value="POR">Portugal 🇵🇹</option>
+                                    <option value="NED">Netherlands 🇳🇱</option>
+                                    <option value="BEL">Belgium 🇧🇪</option>
+                                    <option value="CRO">Croatia 🇭🇷</option>
+                                    <option value="JPN">Japan 🇯🇵</option>
+                                    <option value="MEX">Mexico 🇲🇽</option>
+                                    <option value="MAR">Morocco 🇲🇦</option>
                                 </select>
                             </div>
                         </div>
@@ -460,88 +466,7 @@
                     </div>
                 </section>
 
-                <!-- TAB 6: App Blueprint & Deployment Guide -->
-                <section id="view-blueprint" class="hidden space-y-6">
-                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
-                        <div>
-                            <span class="text-amber-400 font-extrabold text-xs tracking-wider uppercase">App Creator Blueprint</span>
-                            <h2 class="text-xl font-black text-white mt-1">Step-by-Step Production Deployment Guide</h2>
-                            <p class="text-xs text-slate-400 mt-1">How to package and deploy this responsive dashboard on absolute production infrastructure.</p>
-                        </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Step 1: Git Repository Setup -->
-                            <div class="bg-slate-950 border border-slate-850 p-5 rounded-xl space-y-3">
-                                <h3 class="text-sm font-bold text-white flex items-center gap-2 text-emerald-400">
-                                    <i class="fa-brands fa-git-alt"></i> Step 1: Initialize Git Repository
-                                </h3>
-                                <p class="text-xs text-slate-300 leading-relaxed">Save this file as <code class="bg-slate-900 text-emerald-400 px-1 rounded font-mono">index.html</code> inside a clean folder, then execute standard versioning initialization to push to GitHub.</p>
-                                <pre class="bg-slate-900 p-3 rounded-lg text-[10px] font-mono text-slate-300 overflow-x-auto">
-mkdir smartscout-26 && cd smartscout-26
-git init
-git add index.html
-git commit -m "feat: live sports scout release"
-# Create a repository on github.com then:
-git remote add origin https://github.com/yourusername/smartscout-26.git
-git branch -M main
-git push -u origin main</pre>
-                            </div>
-
-                            <!-- Step 2: Cloud Web Hosting -->
-                            <div class="bg-slate-950 border border-slate-850 p-5 rounded-xl space-y-3">
-                                <h3 class="text-sm font-bold text-white flex items-center gap-2 text-teal-400">
-                                    <i class="fa-solid fa-cloud-arrow-up"></i> Step 2: Instant Cloud Hosting
-                                </h3>
-                                <p class="text-xs text-slate-300 leading-relaxed">This frontend application operates entirely within standard static web protocols. You can deploy it for free with permanent CD (Continuous Delivery) pipelines:</p>
-                                <ul class="text-[11px] text-slate-400 space-y-2 list-decimal pl-4">
-                                    <li>Create an account on <strong class="text-slate-200">Vercel</strong> or <strong class="text-slate-200">Netlify</strong>.</li>
-                                    <li>Click <strong class="text-emerald-400">Add New Project</strong> and import your connected GitHub repository.</li>
-                                    <li>Keep build commands empty (since it's a static HTML codebase).</li>
-                                    <li>Click <strong class="text-emerald-400">Deploy</strong>. Your project is live with secure HTTPS support!</li>
-                                </ul>
-                            </div>
-
-                            <!-- Step 3: Serverless CORS Proxy -->
-                            <div class="bg-slate-950 border border-slate-850 p-5 rounded-xl space-y-3">
-                                <h3 class="text-sm font-bold text-white flex items-center gap-2 text-amber-400">
-                                    <i class="fa-solid fa-server"></i> Step 3: Optional Node.js CORS Proxy
-                                </h3>
-                                <p class="text-xs text-slate-300 leading-relaxed">Some open APIs restrict client-side requests due to CORS constraints. If deploying to production, deploy this simple serverless Node.js express proxy endpoint to secure and routing queries safely.</p>
-                                <pre class="bg-slate-900 p-3 rounded-lg text-[10px] font-mono text-slate-300 overflow-x-auto">
-const express = require('express');
-const cors = require('cors');
-const app = express();
-
-app.use(cors());
-
-app.get('/api/player', async (req, res) => {
-  const query = req.query.name;
-  const sportsDBUrl = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${query}`;
-  const fetchResponse = await fetch(sportsDBUrl);
-  const data = await fetchResponse.json();
-  res.json(data);
-});
-
-app.listen(3000, () => console.log('Proxy online!'));</pre>
-                            </div>
-
-                            <!-- Step 4: Hybrid App Build -->
-                            <div class="bg-slate-950 border border-slate-850 p-5 rounded-xl space-y-3">
-                                <h3 class="text-sm font-bold text-white flex items-center gap-2 text-rose-400">
-                                    <i class="fa-solid fa-mobile-screen-button"></i> Step 4: Export to Native Mobile App
-                                </h3>
-                                <p class="text-xs text-slate-300 leading-relaxed">Ready to deploy to the iOS App Store or Google Play? Wrap this single page code using <strong class="text-slate-200">Capacitor.js</strong> to access mobile hardware features easily.</p>
-                                <pre class="bg-slate-900 p-3 rounded-lg text-[10px] font-mono text-slate-300 overflow-x-auto">
-npm install @capacitor/core @capacitor/cli
-npx cap init "SmartScout26" "com.scout.fifa"
-npm install @capacitor/android @capacitor/ios
-npx cap add android
-npx cap add ios
-npx cap sync</pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
             </div>
         </main>
@@ -774,6 +699,87 @@ npx cap sync</pre>
                 { name: "Tyler Adams", pos: "CDM", overall: 80, club: "Bournemouth" },
                 { name: "Antonee Robinson", pos: "LB", overall: 81, club: "Fulham" },
                 { name: "Matt Turner", pos: "GK", overall: 78, club: "Crystal Palace" }
+            ],
+            'GER': [
+                { name: "Florian Wirtz", pos: "CAM", overall: 89, club: "Bayer Leverkusen" },
+                { name: "Jamal Musiala", pos: "CAM", overall: 88, club: "FC Bayern Munich" },
+                { name: "Kai Havertz", pos: "ST", overall: 84, club: "Arsenal FC" },
+                { name: "Leroy Sané", pos: "RW", overall: 85, club: "FC Bayern Munich" },
+                { name: "Joshua Kimmich", pos: "RB", overall: 86, club: "FC Bayern Munich" },
+                { name: "Antonio Rüdiger", pos: "CB", overall: 87, club: "Real Madrid CF" },
+                { name: "Marc-André ter Stegen", pos: "GK", overall: 89, club: "FC Barcelona" }
+            ],
+            'ITA': [
+                { name: "Federico Chiesa", pos: "LW", overall: 84, club: "Liverpool FC" },
+                { name: "Nicolò Barella", pos: "CM", overall: 87, club: "Inter Milan" },
+                { name: "Alessandro Bastoni", pos: "CB", overall: 86, club: "Inter Milan" },
+                { name: "Gianluigi Donnarumma", pos: "GK", overall: 89, club: "Paris Saint-Germain" },
+                { name: "Riccardo Calafiori", pos: "CB", overall: 82, club: "Arsenal FC" },
+                { name: "Mateo Retegui", pos: "ST", overall: 80, club: "Atalanta" },
+                { name: "Davide Frattesi", pos: "CM", overall: 83, club: "Inter Milan" }
+            ],
+            'POR': [
+                { name: "Cristiano Ronaldo", pos: "ST", overall: 86, club: "Al Nassr" },
+                { name: "Rafael Leão", pos: "LW", overall: 87, club: "AC Milan" },
+                { name: "Bruno Fernandes", pos: "CAM", overall: 88, club: "Manchester United" },
+                { name: "Bernardo Silva", pos: "CM", overall: 88, club: "Manchester City" },
+                { name: "Rúben Dias", pos: "CB", overall: 89, club: "Manchester City" },
+                { name: "João Cancelo", pos: "RB", overall: 86, club: "Al Hilal" },
+                { name: "Diogo Costa", pos: "GK", overall: 85, club: "FC Porto" }
+            ],
+            'NED': [
+                { name: "Virgil van Dijk", pos: "CB", overall: 89, club: "Liverpool FC" },
+                { name: "Xavi Simons", pos: "CAM", overall: 84, club: "RB Leipzig" },
+                { name: "Cody Gakpo", pos: "LW", overall: 84, club: "Liverpool FC" },
+                { name: "Frenkie de Jong", pos: "CM", overall: 87, club: "FC Barcelona" },
+                { name: "Jeremie Frimpong", pos: "RB", overall: 84, club: "Bayer Leverkusen" },
+                { name: "Matthijs de Ligt", pos: "CB", overall: 85, club: "Manchester United" },
+                { name: "Bart Verbruggen", pos: "GK", overall: 79, club: "Brighton" }
+            ],
+            'BEL': [
+                { name: "Kevin De Bruyne", pos: "CAM", overall: 90, club: "Manchester City" },
+                { name: "Romelu Lukaku", pos: "ST", overall: 84, club: "SSC Napoli" },
+                { name: "Jérémy Doku", pos: "LW", overall: 83, club: "Manchester City" },
+                { name: "Amadou Onana", pos: "CDM", overall: 82, club: "Aston Villa" },
+                { name: "Leandro Trossard", pos: "LW", overall: 83, club: "Arsenal FC" },
+                { name: "Wout Faes", pos: "CB", overall: 79, club: "Leicester City" },
+                { name: "Koen Casteels", pos: "GK", overall: 82, club: "Al Qadsiah" }
+            ],
+            'CRO': [
+                { name: "Luka Modrić", pos: "CM", overall: 86, club: "Real Madrid CF" },
+                { name: "Joško Gvardiol", pos: "CB", overall: 85, club: "Manchester City" },
+                { name: "Mateo Kovačić", pos: "CM", overall: 83, club: "Manchester City" },
+                { name: "Andrej Kramarić", pos: "ST", overall: 81, club: "TSG Hoffenheim" },
+                { name: "Lovro Majer", pos: "CAM", overall: 80, club: "VfL Wolfsburg" },
+                { name: "Josip Šutalo", pos: "CB", overall: 79, club: "Ajax" },
+                { name: "Dominik Livaković", pos: "GK", overall: 82, club: "Fenerbahçe" }
+            ],
+            'JPN': [
+                { name: "Takefusa Kubo", pos: "RW", overall: 82, club: "Real Sociedad" },
+                { name: "Kaoru Mitoma", pos: "LW", overall: 81, club: "Brighton" },
+                { name: "Wataru Endo", pos: "CDM", overall: 80, club: "Liverpool FC" },
+                { name: "Takumi Minamino", pos: "CAM", overall: 79, club: "AS Monaco" },
+                { name: "Takehiro Tomiyasu", pos: "CB", overall: 80, club: "Arsenal FC" },
+                { name: "Hiroki Ito", pos: "CB", overall: 79, club: "FC Bayern Munich" },
+                { name: "Zion Suzuki", pos: "GK", overall: 74, club: "Parma" }
+            ],
+            'MEX': [
+                { name: "Santiago Giménez", pos: "ST", overall: 81, club: "Feyenoord" },
+                { name: "Edson Álvarez", pos: "CDM", overall: 82, club: "West Ham United" },
+                { name: "Hirving Lozano", pos: "LW", overall: 79, club: "San Diego FC" },
+                { name: "Luis Chávez", pos: "CM", overall: 79, club: "Dynamo Moscow" },
+                { name: "Johan Vásquez", pos: "CB", overall: 77, club: "Genoa" },
+                { name: "César Montes", pos: "CB", overall: 76, club: "Lokomotiv Moscow" },
+                { name: "Luis Malagón", pos: "GK", overall: 78, club: "Club América" }
+            ],
+            'MAR': [
+                { name: "Achraf Hakimi", pos: "RB", overall: 85, club: "Paris Saint-Germain" },
+                { name: "Brahim Díaz", pos: "CAM", overall: 83, club: "Real Madrid CF" },
+                { name: "Hakim Ziyech", pos: "RW", overall: 80, club: "Galatasaray" },
+                { name: "Sofyan Amrabat", pos: "CDM", overall: 80, club: "Fenerbahçe" },
+                { name: "Nayef Aguerd", pos: "CB", overall: 80, club: "Real Sociedad" },
+                { name: "Noussair Mazraoui", pos: "RB", overall: 81, club: "Manchester United" },
+                { name: "Yassine Bounou", pos: "GK", overall: 84, club: "Al Hilal" }
             ]
         };
 
@@ -804,7 +810,7 @@ npx cap sync</pre>
 
         function switchTab(tabId) {
             currentTab = tabId;
-            const sections = ['scout', 'rosters', 'compare', 'squad', 'shortlist', 'blueprint'];
+            const sections = ['scout', 'rosters', 'compare', 'squad', 'shortlist'];
             
             sections.forEach(sec => {
                 const el = document.getElementById(`view-${sec}`);
@@ -817,11 +823,7 @@ npx cap sync</pre>
                 } else {
                     if (el) el.classList.add('hidden');
                     if (btn) {
-                        if (sec === 'blueprint') {
-                            btn.className = "w-full flex items-center gap-4 px-3 py-3 rounded-xl transition-all group text-amber-400 hover:bg-amber-400/10 hover:text-amber-300 font-bold border border-amber-500/10";
-                        } else {
-                            btn.className = "w-full flex items-center gap-4 px-3 py-3 rounded-xl transition-all group text-slate-400 hover:bg-slate-800/60 hover:text-slate-100 font-bold";
-                        }
+                        btn.className = "w-full flex items-center gap-4 px-3 py-3 rounded-xl transition-all group text-slate-400 hover:bg-slate-800/60 hover:text-slate-100 font-bold";
                     }
                 }
             });
