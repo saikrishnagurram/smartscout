@@ -53,7 +53,7 @@
                     <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
                         <i class="fa-solid fa-ranking-star text-slate-950 text-xl"></i>
                     </div>
-                    <span class="hidden md:inline font-black text-sm tracking-widest bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 bg-clip-text text-transparent uppercase">SMARTSCOUT 26</span>
+                    <span class="hidden md:inline font-black text-sm tracking-widest bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300 bg-clip-text text-transparent uppercase">SMARTSCOUT</span>
                 </div>
 
                 <!-- Navigations links -->
@@ -287,11 +287,7 @@
                         </div>
 
                         <!-- Team Statistics Summary Row -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                            <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
-                                <span class="block text-[9px] text-slate-500 font-bold uppercase tracking-wider">Average squad rating</span>
-                                <span id="roster-avg-rating" class="text-xl font-black text-emerald-400">89 OVR</span>
-                            </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                             <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
                                 <span class="block text-[9px] text-slate-500 font-bold uppercase tracking-wider">Squad size</span>
                                 <span id="roster-squad-size" class="text-xl font-black text-slate-100">7 Players</span>
@@ -937,8 +933,11 @@
 
         // Active Web Search Implementation using TheSportsDB
         async function fetchPlayerFromWeb(playerName) {
-            showToast(`Searching TheSportsDB for "${playerName}"...`);
-            const cleanName = playerName.trim();
+            let cleanName = playerName.trim();
+            // Handle common typo for Cristiano Ronaldo
+            cleanName = cleanName.replace(/Christiano/i, 'Cristiano');
+
+            showToast(`Searching TheSportsDB for "${cleanName}"...`);
             const url = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${encodeURIComponent(cleanName)}`;
 
             try {
@@ -1069,7 +1068,6 @@
                             tbody.appendChild(tr);
                         });
 
-                        document.getElementById('roster-avg-rating').innerText = `${Math.round(sumRating / players.length)} OVR`;
                         document.getElementById('roster-squad-size').innerText = `${players.length} Active`;
                     } else {
                         tbody.innerHTML = `<tr><td colspan="5" class="py-10 text-center text-rose-400 font-bold">No players found for this team.</td></tr>`;
