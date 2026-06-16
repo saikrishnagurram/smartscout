@@ -644,151 +644,20 @@
             }
         ];
 
-        // FIFA 2026 National Roster Maps
-        const fifa2026Rosters = {
-            'ARG': [
-                { name: "Lionel Messi", pos: "RW", overall: 91, club: "Inter Miami CF" },
-                { name: "Lautaro Martínez", pos: "ST", overall: 89, club: "Inter Milan" },
-                { name: "Enzo Fernández", pos: "CM", overall: 84, club: "Chelsea FC" },
-                { name: "Alexis Mac Allister", pos: "CM", overall: 86, club: "Liverpool FC" },
-                { name: "Julián Álvarez", pos: "ST", overall: 85, club: "Atlético Madrid" },
-                { name: "Cristian Romero", pos: "CB", overall: 86, club: "Tottenham Hotspur" },
-                { name: "Emiliano Martínez", pos: "GK", overall: 87, club: "Aston Villa" }
-            ],
-            'FRA': [
-                { name: "Kylian Mbappé", pos: "LW", overall: 91, club: "Real Madrid CF" },
-                { name: "Antoine Griezmann", pos: "CAM", overall: 87, club: "Atlético Madrid" },
-                { name: "Eduardo Camavinga", pos: "CM", overall: 85, club: "Real Madrid CF" },
-                { name: "Aurélien Tchouaméni", pos: "CDM", overall: 86, club: "Real Madrid CF" },
-                { name: "William Saliba", pos: "CB", overall: 88, club: "Arsenal FC" },
-                { name: "Theo Hernández", pos: "LB", overall: 86, club: "AC Milan" },
-                { name: "Mike Maignan", pos: "GK", overall: 87, club: "AC Milan" }
-            ],
-            'ENG': [
-                { name: "Harry Kane", pos: "ST", overall: 90, club: "FC Bayern Munich" },
-                { name: "Jude Bellingham", pos: "CM", overall: 90, club: "Real Madrid CF" },
-                { name: "Bukayo Saka", pos: "RW", overall: 88, club: "Arsenal FC" },
-                { name: "Phil Foden", pos: "CAM", overall: 89, club: "Manchester City" },
-                { name: "Declan Rice", pos: "CDM", overall: 87, club: "Arsenal FC" },
-                { name: "Trent Alexander-Arnold", pos: "RB", overall: 86, club: "Liverpool FC" },
-                { name: "John Stones", pos: "CB", overall: 85, club: "Manchester City" }
-            ],
-            'ESP': [
-                { name: "Lamine Yamal", pos: "RW", overall: 87, club: "FC Barcelona" },
-                { name: "Nico Williams", pos: "LW", overall: 85, club: "Athletic Club" },
-                { name: "Pedri", pos: "CM", overall: 86, club: "FC Barcelona" },
-                { name: "Gavi", pos: "CM", overall: 84, club: "FC Barcelona" },
-                { name: "Rodri", pos: "CDM", overall: 90, club: "Manchester City" },
-                { name: "Dani Olmo", pos: "CAM", overall: 85, club: "FC Barcelona" },
-                { name: "Aymeric Laporte", pos: "CB", overall: 83, club: "Al Nassr" }
-            ],
-            'BRA': [
-                { name: "Vinícius Júnior", pos: "LW", overall: 91, club: "Real Madrid CF" },
-                { name: "Rodrygo", pos: "RW", overall: 86, club: "Real Madrid CF" },
-                { name: "Bruno Guimarães", pos: "CM", overall: 85, club: "Newcastle United" },
-                { name: "Lucas Paquetá", pos: "CAM", overall: 84, club: "West Ham United" },
-                { name: "Gabriel Magalhães", pos: "CB", overall: 85, club: "Arsenal FC" },
-                { name: "Marquinhos", pos: "CB", overall: 87, club: "Paris Saint-Germain" },
-                { name: "Alisson Becker", pos: "GK", overall: 89, club: "Liverpool FC" }
-            ],
-            'USA': [
-                { name: "Christian Pulisic", pos: "RW", overall: 85, club: "AC Milan" },
-                { name: "Weston McKennie", pos: "CM", overall: 81, club: "Juventus" },
-                { name: "Folarin Balogun", pos: "ST", overall: 80, club: "AS Monaco" },
-                { name: "Yunus Musah", pos: "CM", overall: 79, club: "AC Milan" },
-                { name: "Tyler Adams", pos: "CDM", overall: 80, club: "Bournemouth" },
-                { name: "Antonee Robinson", pos: "LB", overall: 81, club: "Fulham" },
-                { name: "Matt Turner", pos: "GK", overall: 78, club: "Crystal Palace" }
-            ],
-            'GER': [
-                { name: "Florian Wirtz", pos: "CAM", overall: 89, club: "Bayer Leverkusen" },
-                { name: "Jamal Musiala", pos: "CAM", overall: 88, club: "FC Bayern Munich" },
-                { name: "Kai Havertz", pos: "ST", overall: 84, club: "Arsenal FC" },
-                { name: "Leroy Sané", pos: "RW", overall: 85, club: "FC Bayern Munich" },
-                { name: "Joshua Kimmich", pos: "RB", overall: 86, club: "FC Bayern Munich" },
-                { name: "Antonio Rüdiger", pos: "CB", overall: 87, club: "Real Madrid CF" },
-                { name: "Marc-André ter Stegen", pos: "GK", overall: 89, club: "FC Barcelona" }
-            ],
-            'ITA': [
-                { name: "Federico Chiesa", pos: "LW", overall: 84, club: "Liverpool FC" },
-                { name: "Nicolò Barella", pos: "CM", overall: 87, club: "Inter Milan" },
-                { name: "Alessandro Bastoni", pos: "CB", overall: 86, club: "Inter Milan" },
-                { name: "Gianluigi Donnarumma", pos: "GK", overall: 89, club: "Paris Saint-Germain" },
-                { name: "Riccardo Calafiori", pos: "CB", overall: 82, club: "Arsenal FC" },
-                { name: "Mateo Retegui", pos: "ST", overall: 80, club: "Atalanta" },
-                { name: "Davide Frattesi", pos: "CM", overall: 83, club: "Inter Milan" }
-            ],
-            'POR': [
-                { name: "Cristiano Ronaldo", pos: "ST", overall: 86, club: "Al Nassr" },
-                { name: "Rafael Leão", pos: "LW", overall: 87, club: "AC Milan" },
-                { name: "Bruno Fernandes", pos: "CAM", overall: 88, club: "Manchester United" },
-                { name: "Bernardo Silva", pos: "CM", overall: 88, club: "Manchester City" },
-                { name: "Rúben Dias", pos: "CB", overall: 89, club: "Manchester City" },
-                { name: "João Cancelo", pos: "RB", overall: 86, club: "Al Hilal" },
-                { name: "Diogo Costa", pos: "GK", overall: 85, club: "FC Porto" }
-            ],
-            'NED': [
-                { name: "Virgil van Dijk", pos: "CB", overall: 89, club: "Liverpool FC" },
-                { name: "Xavi Simons", pos: "CAM", overall: 84, club: "RB Leipzig" },
-                { name: "Cody Gakpo", pos: "LW", overall: 84, club: "Liverpool FC" },
-                { name: "Frenkie de Jong", pos: "CM", overall: 87, club: "FC Barcelona" },
-                { name: "Jeremie Frimpong", pos: "RB", overall: 84, club: "Bayer Leverkusen" },
-                { name: "Matthijs de Ligt", pos: "CB", overall: 85, club: "Manchester United" },
-                { name: "Bart Verbruggen", pos: "GK", overall: 79, club: "Brighton" }
-            ],
-            'BEL': [
-                { name: "Kevin De Bruyne", pos: "CAM", overall: 90, club: "Manchester City" },
-                { name: "Romelu Lukaku", pos: "ST", overall: 84, club: "SSC Napoli" },
-                { name: "Jérémy Doku", pos: "LW", overall: 83, club: "Manchester City" },
-                { name: "Amadou Onana", pos: "CDM", overall: 82, club: "Aston Villa" },
-                { name: "Leandro Trossard", pos: "LW", overall: 83, club: "Arsenal FC" },
-                { name: "Wout Faes", pos: "CB", overall: 79, club: "Leicester City" },
-                { name: "Koen Casteels", pos: "GK", overall: 82, club: "Al Qadsiah" }
-            ],
-            'CRO': [
-                { name: "Luka Modrić", pos: "CM", overall: 86, club: "Real Madrid CF" },
-                { name: "Joško Gvardiol", pos: "CB", overall: 85, club: "Manchester City" },
-                { name: "Mateo Kovačić", pos: "CM", overall: 83, club: "Manchester City" },
-                { name: "Andrej Kramarić", pos: "ST", overall: 81, club: "TSG Hoffenheim" },
-                { name: "Lovro Majer", pos: "CAM", overall: 80, club: "VfL Wolfsburg" },
-                { name: "Josip Šutalo", pos: "CB", overall: 79, club: "Ajax" },
-                { name: "Dominik Livaković", pos: "GK", overall: 82, club: "Fenerbahçe" }
-            ],
-            'JPN': [
-                { name: "Takefusa Kubo", pos: "RW", overall: 82, club: "Real Sociedad" },
-                { name: "Kaoru Mitoma", pos: "LW", overall: 81, club: "Brighton" },
-                { name: "Wataru Endo", pos: "CDM", overall: 80, club: "Liverpool FC" },
-                { name: "Takumi Minamino", pos: "CAM", overall: 79, club: "AS Monaco" },
-                { name: "Takehiro Tomiyasu", pos: "CB", overall: 80, club: "Arsenal FC" },
-                { name: "Hiroki Ito", pos: "CB", overall: 79, club: "FC Bayern Munich" },
-                { name: "Zion Suzuki", pos: "GK", overall: 74, club: "Parma" }
-            ],
-            'MEX': [
-                { name: "Santiago Giménez", pos: "ST", overall: 81, club: "Feyenoord" },
-                { name: "Edson Álvarez", pos: "CDM", overall: 82, club: "West Ham United" },
-                { name: "Hirving Lozano", pos: "LW", overall: 79, club: "San Diego FC" },
-                { name: "Luis Chávez", pos: "CM", overall: 79, club: "Dynamo Moscow" },
-                { name: "Johan Vásquez", pos: "CB", overall: 77, club: "Genoa" },
-                { name: "César Montes", pos: "CB", overall: 76, club: "Lokomotiv Moscow" },
-                { name: "Luis Malagón", pos: "GK", overall: 78, club: "Club América" }
-            ],
-            'MAR': [
-                { name: "Achraf Hakimi", pos: "RB", overall: 85, club: "Paris Saint-Germain" },
-                { name: "Brahim Díaz", pos: "CAM", overall: 83, club: "Real Madrid CF" },
-                { name: "Hakim Ziyech", pos: "RW", overall: 80, club: "Galatasaray" },
-                { name: "Sofyan Amrabat", pos: "CDM", overall: 80, club: "Fenerbahçe" },
-                { name: "Nayef Aguerd", pos: "CB", overall: 80, club: "Real Sociedad" },
-                { name: "Noussair Mazraoui", pos: "RB", overall: 81, club: "Manchester United" },
-                { name: "Yassine Bounou", pos: "GK", overall: 84, club: "Al Hilal" }
-            ]
-        };
-
         // App State
         let currentTab = 'scout';
         let activePlayer = localPlayersDatabase[0];
         let shortlistedPlayers = [localPlayersDatabase[0], localPlayersDatabase[1], localPlayersDatabase[4]]; 
         let selectedPitchFormation = '4-3-3';
         
+        // Map country codes to TheSportsDB team names for reliable fetching
+        const countryMap = {
+            'ARG': 'Argentina', 'FRA': 'France', 'ENG': 'England', 'ESP': 'Spain',
+            'BRA': 'Brazil', 'USA': 'USA', 'GER': 'Germany', 'ITA': 'Italy',
+            'POR': 'Portugal', 'NED': 'Netherlands', 'BEL': 'Belgium',
+            'CRO': 'Croatia', 'JPN': 'Japan', 'MEX': 'Mexico', 'MAR': 'Morocco'
+        };
+
         let pitchSquadAllocation = {
             'GK': null, 'LB': null, 'CB1': null, 'CB2': null, 'RB': null,
             'CM1': null, 'CM2': null, 'CM3': null, 'LW': null, 'ST': null, 'RW': null
@@ -1008,7 +877,7 @@
                 });
             }
 
-            // Display Live Web API Search trigger helper instead of AI prompt
+            // Always provide option to search API
             const webScoutBtn = document.createElement('div');
             webScoutBtn.className = "bg-slate-950/80 p-3 hover:bg-emerald-500/10 cursor-pointer border-t border-slate-850 flex items-center justify-between text-xs text-emerald-400 font-bold";
             webScoutBtn.onclick = () => {
@@ -1017,7 +886,7 @@
                 document.getElementById('main-global-search').value = '';
             };
             webScoutBtn.innerHTML = `
-                <span><i class="fa-solid fa-wifi mr-2 text-teal-400 animate-pulse"></i> Query Sports Web API for "${query}"</span>
+                <span><i class="fa-solid fa-wifi mr-2 text-teal-400 animate-pulse"></i> Search TheSportsDB API for "${query}"</span>
                 <i class="fa-solid fa-chevron-right text-[10px]"></i>
             `;
             dropdown.appendChild(webScoutBtn);
@@ -1060,12 +929,15 @@
             if (nat.includes("norway")) return "🇳🇴";
             if (nat.includes("belgium")) return "🇧🇪";
             if (nat.includes("croatia")) return "🇭🇷";
+            if (nat.includes("japan")) return "🇯🇵";
+            if (nat.includes("mexico")) return "🇲🇽";
+            if (nat.includes("morocco")) return "🇲🇦";
             return "⚽";
         }
 
-        // Active Web Search Implementation to replace AI Engine
+        // Active Web Search Implementation using TheSportsDB
         async function fetchPlayerFromWeb(playerName) {
-            showToast(`Searching sports API for "${playerName}"...`);
+            showToast(`Searching TheSportsDB for "${playerName}"...`);
             const cleanName = playerName.trim();
             const url = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${encodeURIComponent(cleanName)}`;
 
@@ -1103,7 +975,7 @@
                         physical: isDef ? 84 : isMid ? 72 : isFwd ? 68 : 70
                     };
 
-                    // Add dynamic randomness deviation for unique cards
+                    // Add dynamic randomness deviation
                     Object.keys(stats).forEach(k => {
                         stats[k] = Math.min(99, Math.max(30, stats[k] + Math.floor(Math.random() * 14) - 7));
                     });
@@ -1117,17 +989,14 @@
                     }
                     overall = Math.min(99, Math.max(60, overall));
 
-                    // Age calculation from birthday
                     let age = 25;
                     if (apiPlayer.dateBorn) {
                         const birthYear = new Date(apiPlayer.dateBorn).getFullYear();
-                        if (!isNaN(birthYear)) {
-                            age = 2026 - birthYear;
-                        }
+                        if (!isNaN(birthYear)) age = 2026 - birthYear;
                     }
 
                     const mappedPlayer = {
-                        id: "WEB-" + (apiPlayer.idPlayer || Math.floor(Math.random() * 9000 + 1000)),
+                        id: "WEB-" + apiPlayer.idPlayer,
                         name: apiPlayer.strPlayer,
                         nationality: apiPlayer.strNationality || "Unknown",
                         flag: getFlagEmoji(apiPlayer.strNationality),
@@ -1137,96 +1006,79 @@
                         foot: apiPlayer.strSide === "Left" ? "Left" : "Right",
                         rating: overall,
                         marketValue: apiPlayer.strSigning ? apiPlayer.strSigning : "€" + (Math.floor(Math.random() * 80) + 10) + ".00m",
-                        bio: apiPlayer.strDescriptionEN ? (apiPlayer.strDescriptionEN.slice(0, 180) + "...") : `${apiPlayer.strPlayer} is a professional football athlete playing as a ${apiPlayer.strPosition}.`,
+                        bio: apiPlayer.strDescriptionEN ? (apiPlayer.strDescriptionEN.slice(0, 180) + "...") : `${apiPlayer.strPlayer} is a professional athlete.`,
                         avatar: apiPlayer.strCutout || apiPlayer.strThumb || `https://placehold.co/120x120/111827/10b981?text=${apiPlayer.strPlayer.replace(/\s+/g, '+')}`,
                         stats: stats,
-                        honors: [
-                            { year: "2026", event: `Verified roster alignment with ${apiPlayer.strTeam || 'club networks'}` }
-                        ]
+                        honors: [{ year: "2026", event: `Verified with ${apiPlayer.strTeam || 'club networks'}` }]
                     };
 
                     selectPlayer(mappedPlayer);
                     switchTab('scout');
-                    showToast(`Success: Loaded profile for ${mappedPlayer.name}`);
+                    showToast(`Loaded: ${mappedPlayer.name}`);
                 } else {
-                    throw new Error("No player matched on public API search");
+                    throw new Error("No player found.");
                 }
             } catch (e) {
-                console.warn("API direct fetch restriction (CORS/Rate limit). Compiling robust static backup profile...", e);
-                generateLocalDynamicPlayer(playerName);
+                console.warn("API Search Error:", e);
+                showToast("Search failed. Try another name.");
             }
         }
 
-        // Secure Fallback Generation Logic if Direct API is Sandboxed
-        function generateLocalDynamicPlayer(playerName) {
-            const formattedName = playerName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-            const positionOptions = ["ST", "RW", "LW", "CM", "CDM", "CAM", "CB", "LB", "RB"];
-            const randomPos = positionOptions[Math.floor(Math.random() * positionOptions.length)];
-            
-            const stats = {
-                pace: Math.floor(Math.random() * 25) + 70,
-                shooting: Math.floor(Math.random() * 25) + 65,
-                passing: Math.floor(Math.random() * 25) + 70,
-                dribbling: Math.floor(Math.random() * 25) + 72,
-                defending: Math.floor(Math.random() * 45) + 40,
-                physical: Math.floor(Math.random() * 25) + 65
-            };
-
-            const score = Math.round((stats.pace + stats.shooting + stats.passing + stats.dribbling) / 4) + 3;
-            const rating = Math.min(96, Math.max(70, score));
-
-            const fallbackObj = {
-                id: "GEN-" + Math.floor(Math.random() * 9000 + 1000),
-                name: formattedName,
-                nationality: "International Star",
-                flag: "🌎",
-                age: Math.floor(Math.random() * 12) + 19,
-                club: "Global League FC",
-                position: randomPos,
-                foot: Math.random() > 0.3 ? "Right" : "Left",
-                rating: rating,
-                marketValue: "€" + (Math.floor(Math.random() * 90) + 15) + ".00m",
-                bio: `${formattedName} is a highly regarded tactical player. Recognized globally for spatial intelligence, reliable on-ball metrics, and fluid matchday integration.`,
-                avatar: `https://placehold.co/120x120/111827/10b981?text=${formattedName.replace(/\s+/g, '+')}`,
-                stats: stats,
-                honors: [
-                    { year: "2026", event: "Scouted dynamically via custom live analytical engine modules." }
-                ]
-            };
-
-            selectPlayer(fallbackObj);
-            switchTab('scout');
-            showToast(`Offline generation compiled for ${formattedName}`);
-        }
-
-        function loadRosterTeam() {
+        async function loadRosterTeam() {
             const countryCode = document.getElementById('roster-country-select').value;
-            const teamPlayers = fifa2026Rosters[countryCode] || [];
-            
+            const countryName = countryMap[countryCode] || countryCode;
             const tbody = document.getElementById('roster-table-body');
-            tbody.innerHTML = '';
+            
+            tbody.innerHTML = `<tr><td colspan="5" class="py-10 text-center text-slate-500 font-bold animate-pulse">Fetching live roster from TheSportsDB...</td></tr>`;
 
-            let sumRating = 0;
-            teamPlayers.forEach(p => {
-                sumRating += p.overall;
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-900/50 transition-colors";
-                tr.innerHTML = `
-                    <td class="py-3 px-4 font-bold text-white">${p.name}</td>
-                    <td class="py-3 px-4 font-mono text-slate-400 font-bold">${p.pos}</td>
-                    <td class="py-3 px-4 text-center text-emerald-400 font-black">${p.overall}</td>
-                    <td class="py-3 px-4 text-slate-300 font-medium">${p.club}</td>
-                    <td class="py-3 px-4 text-right">
-                        <button onclick="scoutAndDisplayFromRoster('${p.name}')" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 text-[11px] font-bold py-1 px-3 rounded-lg transition-colors">
-                            Deep Analyze
-                        </button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
+            try {
+                // First search for the team to get its ID
+                const teamRes = await fetch(`https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${encodeURIComponent(countryName)}`);
+                const teamData = await teamRes.json();
+                
+                if (teamData && teamData.teams && teamData.teams.length > 0) {
+                    const teamId = teamData.teams[0].idTeam;
+                    
+                    // Fetch all players for that team
+                    const playersRes = await fetch(`https://www.thesportsdb.com/api/v1/json/3/lookup_all_players.php?id=${teamId}`);
+                    const playersData = await playersRes.json();
 
-            document.getElementById('roster-avg-rating').innerText = `${Math.round(sumRating / teamPlayers.length)} OVR`;
-            document.getElementById('roster-squad-size').innerText = `${teamPlayers.length} Active`;
+                    if (playersData && playersData.player && playersData.player.length > 0) {
+                        tbody.innerHTML = '';
+                        let sumRating = 0;
+                        const players = playersData.player.slice(0, 23); // Standard squad size
+
+                        players.forEach(p => {
+                            // Simple heuristic for rating if not provided
+                            const rating = 75 + Math.floor(Math.random() * 15);
+                            sumRating += rating;
+                            
+                            const tr = document.createElement('tr');
+                            tr.className = "hover:bg-slate-900/50 transition-colors";
+                            tr.innerHTML = `
+                                <td class="py-3 px-4 font-bold text-white">${p.strPlayer}</td>
+                                <td class="py-3 px-4 font-mono text-slate-400 font-bold">${p.strPosition || 'N/A'}</td>
+                                <td class="py-3 px-4 text-center text-emerald-400 font-black">${rating}</td>
+                                <td class="py-3 px-4 text-slate-300 font-medium">${p.strTeam}</td>
+                                <td class="py-3 px-4 text-right">
+                                    <button onclick="fetchPlayerFromWeb('${p.strPlayer}')" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 text-[11px] font-bold py-1 px-3 rounded-lg transition-colors">
+                                        Analyze
+                                    </button>
+                                </td>
+                            `;
+                            tbody.appendChild(tr);
+                        });
+
+                        document.getElementById('roster-avg-rating').innerText = `${Math.round(sumRating / players.length)} OVR`;
+                        document.getElementById('roster-squad-size').innerText = `${players.length} Active`;
+                    } else {
+                        tbody.innerHTML = `<tr><td colspan="5" class="py-10 text-center text-rose-400 font-bold">No players found for this team.</td></tr>`;
+                    }
+                }
+            } catch (e) {
+                console.error("Roster Fetch Error:", e);
+                tbody.innerHTML = `<tr><td colspan="5" class="py-10 text-center text-rose-400 font-bold">Error connecting to Sports API.</td></tr>`;
+            }
         }
 
         function scoutAndDisplayFromRoster(name) {
