@@ -267,21 +267,65 @@
                             </div>
                             <div class="flex gap-2">
                                 <select id="roster-country-select" onchange="loadRosterTeam()" class="bg-slate-950 border border-slate-800 text-slate-100 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-emerald-500">
-                                    <option value="ARG">Argentina 🇦🇷</option>
-                                    <option value="FRA">France 🇫🇷</option>
-                                    <option value="ENG">England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
-                                    <option value="ESP">Spain 🇪🇸</option>
-                                    <option value="BRA">Brazil 🇧🇷</option>
-                                    <option value="USA">United States 🇺🇸</option>
-                                    <option value="GER">Germany 🇩🇪</option>
-                                    <option value="ITA">Italy 🇮🇹</option>
-                                    <option value="POR">Portugal 🇵🇹</option>
-                                    <option value="NED">Netherlands 🇳🇱</option>
-                                    <option value="BEL">Belgium 🇧🇪</option>
-                                    <option value="CRO">Croatia 🇭🇷</option>
-                                    <option value="JPN">Japan 🇯🇵</option>
-                                    <option value="MEX">Mexico 🇲🇽</option>
-                                    <option value="MAR">Morocco 🇲🇦</option>
+                                    <optgroup label="Host Nations">
+                                        <option value="USA">United States 🇺🇸</option>
+                                        <option value="CAN">Canada 🇨🇦</option>
+                                        <option value="MEX">Mexico 🇲🇽</option>
+                                    </optgroup>
+                                    <optgroup label="UEFA (Europe)">
+                                        <option value="FRA">France 🇫🇷</option>
+                                        <option value="ENG">England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</option>
+                                        <option value="ESP">Spain 🇪🇸</option>
+                                        <option value="GER">Germany 🇩🇪</option>
+                                        <option value="ITA">Italy 🇮🇹</option>
+                                        <option value="POR">Portugal 🇵🇹</option>
+                                        <option value="NED">Netherlands 🇳🇱</option>
+                                        <option value="BEL">Belgium 🇧🇪</option>
+                                        <option value="CRO">Croatia 🇭🇷</option>
+                                        <option value="SUI">Switzerland 🇨🇭</option>
+                                        <option value="DEN">Denmark 🇩🇰</option>
+                                        <option value="AUT">Austria 🇦🇹</option>
+                                        <option value="SWE">Sweden 🇸🇪</option>
+                                        <option value="SRB">Serbia 🇷🇸</option>
+                                        <option value="POL">Poland 🇵🇱</option>
+                                        <option value="SCO">Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿</option>
+                                        <option value="WAL">Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿</option>
+                                        <option value="TUR">Turkey 🇹🇷</option>
+                                        <option value="UKR">Ukraine 🇺🇦</option>
+                                    </optgroup>
+                                    <optgroup label="CONMEBOL (South America)">
+                                        <option value="ARG">Argentina 🇦🇷</option>
+                                        <option value="BRA">Brazil 🇧🇷</option>
+                                        <option value="URU">Uruguay 🇺🇾</option>
+                                        <option value="COL">Colombia 🇨🇴</option>
+                                        <option value="ECU">Ecuador 🇪🇨</option>
+                                        <option value="CHI">Chile 🇨🇱</option>
+                                        <option value="PER">Peru 🇵🇪</option>
+                                    </optgroup>
+                                    <optgroup label="CAF (Africa)">
+                                        <option value="MAR">Morocco 🇲🇦</option>
+                                        <option value="SEN">Senegal 🇸🇳</option>
+                                        <option value="EGY">Egypt 🇪🇬</option>
+                                        <option value="NGA">Nigeria 🇳🇬</option>
+                                        <option value="ALG">Algeria 🇩🇿</option>
+                                        <option value="CIV">Ivory Coast 🇨🇮</option>
+                                        <option value="CMR">Cameroon 🇨🇲</option>
+                                        <option value="GHA">Ghana 🇬🇭</option>
+                                    </optgroup>
+                                    <optgroup label="AFC (Asia)">
+                                        <option value="JPN">Japan 🇯🇵</option>
+                                        <option value="KOR">South Korea 🇰🇷</option>
+                                        <option value="IRN">Iran 🇮🇷</option>
+                                        <option value="AUS">Australia 🇦🇺</option>
+                                        <option value="KSA">Saudi Arabia 🇸🇦</option>
+                                        <option value="QAT">Qatar 🇶🇦</option>
+                                    </optgroup>
+                                    <optgroup label="CONCACAF & OFC">
+                                        <option value="CRC">Costa Rica 🇨🇷</option>
+                                        <option value="PAN">Panama 🇵🇦</option>
+                                        <option value="JAM">Jamaica 🇯🇲</option>
+                                        <option value="NZL">New Zealand 🇳🇿</option>
+                                    </optgroup>
                                 </select>
                             </div>
                         </div>
@@ -651,7 +695,15 @@
             'ARG': 'Argentina', 'FRA': 'France', 'ENG': 'England', 'ESP': 'Spain',
             'BRA': 'Brazil', 'USA': 'USA', 'GER': 'Germany', 'ITA': 'Italy',
             'POR': 'Portugal', 'NED': 'Netherlands', 'BEL': 'Belgium',
-            'CRO': 'Croatia', 'JPN': 'Japan', 'MEX': 'Mexico', 'MAR': 'Morocco'
+            'CRO': 'Croatia', 'JPN': 'Japan', 'MEX': 'Mexico', 'MAR': 'Morocco',
+            'CAN': 'Canada', 'URU': 'Uruguay', 'COL': 'Colombia', 'ECU': 'Ecuador', 
+            'CHI': 'Chile', 'SEN': 'Senegal', 'EGY': 'Egypt', 'NGA': 'Nigeria', 
+            'ALG': 'Algeria', 'CIV': 'Ivory Coast', 'CMR': 'Cameroon', 'GHA': 'Ghana',
+            'KOR': 'South Korea', 'IRN': 'Iran', 'AUS': 'Australia', 'KSA': 'Saudi Arabia', 
+            'QAT': 'Qatar', 'CRC': 'Costa Rica', 'PAN': 'Panama', 'JAM': 'Jamaica',
+            'SUI': 'Switzerland', 'DEN': 'Denmark', 'AUT': 'Austria', 'SWE': 'Sweden', 
+            'SRB': 'Serbia', 'POL': 'Poland', 'WAL': 'Wales', 'PER': 'Peru', 
+            'NZL': 'New Zealand', 'SCO': 'Scotland', 'TUR': 'Turkey', 'UKR': 'Ukraine'
         };
 
         let pitchSquadAllocation = {
