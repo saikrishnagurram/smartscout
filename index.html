@@ -1807,26 +1807,50 @@
 
         // FIFA 2026 World Cup Match Fixtures Data (with scores for matches completed as of June 15, 2026)
         const worldCupMatches = [
-            { id: 1, date: "June 11, 2026", time: "18:00", stage: "group", host: "MEX", teamA: "Mexico", flagA: "🇲🇽", teamB: "Ecuador", flagB: "🇪🇨", venue: "Estadio Azteca", city: "Mexico City", group: "Group A", scoreA: 2, scoreB: 1 },
-            { id: 2, date: "June 12, 2026", time: "15:00", stage: "group", host: "CAN", teamA: "Canada", flagA: "🇨🇦", teamB: "Morocco", flagB: "🇲🇦", venue: "BMO Field", city: "Toronto", group: "Group B", scoreA: 1, scoreB: 2 },
-            { id: 3, date: "June 12, 2026", time: "19:00", stage: "group", host: "USA", teamA: "USA", flagA: "🇺🇸", teamB: "Senegal", flagB: "🇸🇳", venue: "SoFi Stadium", city: "Los Angeles", group: "Group D", scoreA: 3, scoreB: 2 },
-            { id: 4, date: "June 13, 2026", time: "14:00", stage: "group", host: "USA", teamA: "Argentina", flagA: "🇦🇷", teamB: "Switzerland", flagB: "🇨🇭", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "Group C", scoreA: 2, scoreB: 0 },
-            { id: 5, date: "June 13, 2026", time: "18:00", stage: "group", host: "USA", teamA: "Spain", flagA: "🇪🇸", teamB: "South Korea", flagB: "🇰🇷", venue: "Hard Rock Stadium", city: "Miami", group: "Group E", scoreA: 1, scoreB: 1 },
-            { id: 6, date: "June 14, 2026", time: "16:00", stage: "group", host: "USA", teamA: "France", flagA: "🇫🇷", teamB: "Japan", flagB: "🇯🇵", venue: "Mercedes-Benz Stadium", city: "Atlanta", group: "Group F", scoreA: 3, scoreB: 1 },
-            { id: 7, date: "June 14, 2026", time: "20:00", stage: "group", host: "USA", teamA: "England", flagA: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", teamB: "Egypt", flagB: "🇪🇬", venue: "Gillette Stadium", city: "Boston", group: "Group G", scoreA: 2, scoreB: 0 },
-            { id: 8, date: "June 15, 2026", time: "15:00", stage: "group", host: "USA", teamA: "Brazil", flagA: "🇧🇷", teamB: "Australia", flagB: "🇦🇺", venue: "NRG Stadium", city: "Houston", group: "Group H", scoreA: 2, scoreB: 1 },
-            { id: 9, date: "June 15, 2026", time: "19:00", stage: "group", host: "USA", teamA: "Germany", flagA: "🇩🇪", teamB: "Cameroon", flagB: "🇨🇲", venue: "Lumen Field", city: "Seattle", group: "Group I", scoreA: 1, scoreB: 0 },
-            { id: 10, date: "June 16, 2026", time: "14:00", stage: "group", host: "USA", teamA: "Netherlands", flagA: "🇳🇱", teamB: "Saudi Arabia", flagB: "🇸🇦", venue: "Levi's Stadium", city: "San Francisco", group: "Group J" },
-            { id: 11, date: "June 16, 2026", time: "18:00", stage: "group", host: "USA", teamA: "Portugal", flagA: "🇵🇹", teamB: "Colombia", flagB: "🇨🇴", venue: "AT&T Stadium", city: "Dallas", group: "Group K" },
-            { id: 12, date: "June 17, 2026", time: "16:00", stage: "group", host: "CAN", teamA: "Uruguay", flagA: "🇺🇾", teamB: "Belgium", flagB: "🇧🇪", venue: "BC Place", city: "Vancouver", group: "Group L" },
+            // Group A
+            { id: 1, date: "June 11, 2026", time: "18:00", stage: "group", host: "MEX", teamA: "Mexico", flagA: "🇲🇽", teamB: "South Africa", flagB: "🇿🇦", venue: "Estadio Azteca", city: "Mexico City", group: "Group A", scoreA: 2, scoreB: 0 },
+            { id: 2, date: "June 11, 2026", time: "15:00", stage: "group", host: "MEX", teamA: "South Korea", flagA: "🇰🇷", teamB: "Czech Republic", flagB: "🇨🇿", venue: "Guadalajara Stadium", city: "Guadalajara", group: "Group A", scoreA: 2, scoreB: 1 },
+            // Group B
+            { id: 3, date: "June 12, 2026", time: "15:00", stage: "group", host: "CAN", teamA: "Canada", flagA: "🇨🇦", teamB: "Bosnia and Herzegovina", flagB: "🇧🇦", venue: "BMO Field", city: "Toronto", group: "Group B", scoreA: 1, scoreB: 1 },
+            { id: 4, date: "June 13, 2026", time: "14:00", stage: "group", host: "USA", teamA: "Qatar", flagA: "🇶🇦", teamB: "Switzerland", flagB: "🇨🇭", venue: "Levi's Stadium", city: "San Francisco", group: "Group B", scoreA: 1, scoreB: 1 },
+            // Group C
+            { id: 5, date: "June 13, 2026", time: "18:00", stage: "group", host: "USA", teamA: "Brazil", flagA: "🇧🇷", teamB: "Morocco", flagB: "🇲🇦", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "Group C", scoreA: 1, scoreB: 1 },
+            { id: 6, date: "June 13, 2026", time: "19:00", stage: "group", host: "USA", teamA: "Scotland", flagA: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", teamB: "Haiti", flagB: "🇭🇹", venue: "Gillette Stadium", city: "Boston", group: "Group C", scoreA: 1, scoreB: 0 },
+            // Group D
+            { id: 7, date: "June 12, 2026", time: "19:00", stage: "group", host: "USA", teamA: "USA", flagA: "🇺🇸", teamB: "Paraguay", flagB: "🇵🇾", venue: "SoFi Stadium", city: "Los Angeles", group: "Group D", scoreA: 4, scoreB: 1 },
+            { id: 8, date: "June 13, 2026", time: "20:00", stage: "group", host: "CAN", teamA: "Australia", flagA: "🇦🇺", teamB: "Turkiye", flagB: "🇹🇷", venue: "BC Place", city: "Vancouver", group: "Group D", scoreA: 2, scoreB: 0 },
+            // Group E
+            { id: 9, date: "June 14, 2026", time: "16:00", stage: "group", host: "USA", teamA: "Germany", flagA: "🇩🇪", teamB: "Curacao", flagB: "🇨🇼", venue: "NRG Stadium", city: "Houston", group: "Group E", scoreA: 7, scoreB: 1 },
+            { id: 10, date: "June 14, 2026", time: "20:00", stage: "group", host: "USA", teamA: "Ivory Coast", flagA: "🇨🇮", teamB: "Ecuador", flagB: "🇪🇨", venue: "Philadelphia Stadium", city: "Philadelphia", group: "Group E", scoreA: 1, scoreB: 0 },
+            // Group F
+            { id: 11, date: "June 14, 2026", time: "18:00", stage: "group", host: "USA", teamA: "Netherlands", flagA: "🇳🇱", teamB: "Japan", flagB: "🇯🇵", venue: "AT&T Stadium", city: "Dallas", group: "Group F", scoreA: 2, scoreB: 2 },
+            { id: 12, date: "June 14, 2026", time: "20:00", stage: "group", host: "MEX", teamA: "Sweden", flagA: "🇸🇪", teamB: "Tunisia", flagB: "🇹🇳", venue: "Estadio BBVA", city: "Monterrey", group: "Group F", scoreA: 5, scoreB: 1 },
+            // Group G
+            { id: 13, date: "June 15, 2026", time: "15:00", stage: "group", host: "USA", teamA: "Belgium", flagA: "🇧🇪", teamB: "Egypt", flagB: "🇪🇬", venue: "Lumen Field", city: "Seattle", group: "Group G", scoreA: 1, scoreB: 1 },
+            { id: 14, date: "June 15, 2026", time: "19:00", stage: "group", host: "USA", teamA: "Iran", flagA: "🇮🇷", teamB: "New Zealand", flagB: "🇳🇿", venue: "SoFi Stadium", city: "Los Angeles", group: "Group G", scoreA: 1, scoreB: 1 },
+            // Group H
+            { id: 15, date: "June 15, 2026", time: "15:00", stage: "group", host: "USA", teamA: "Spain", flagA: "🇪🇸", teamB: "Cape Verde", flagB: "🇨🇻", venue: "Mercedes-Benz Stadium", city: "Atlanta", group: "Group H", scoreA: 0, scoreB: 0 },
+            { id: 16, date: "June 15, 2026", time: "19:00", stage: "group", host: "USA", teamA: "Saudi Arabia", flagA: "🇸🇦", teamB: "Uruguay", flagB: "🇺🇾", venue: "Hard Rock Stadium", city: "Miami", group: "Group H", scoreA: 1, scoreB: 1 },
+            // Group I
+            { id: 17, date: "June 16, 2026", time: "15:00", stage: "group", host: "USA", teamA: "France", flagA: "🇫🇷", teamB: "Senegal", flagB: "🇸🇳", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "Group I" },
+            { id: 18, date: "June 16, 2026", time: "18:00", stage: "group", host: "USA", teamA: "Iraq", flagA: "🇮🇶", teamB: "Norway", flagB: "🇳🇴", venue: "Gillette Stadium", city: "Boston", group: "Group I" },
+            // Group J
+            { id: 19, date: "June 16, 2026", time: "20:00", stage: "group", host: "USA", teamA: "Argentina", flagA: "🇦🇷", teamB: "Algeria", flagB: "🇩🇿", venue: "Arrowhead Stadium", city: "Kansas City", group: "Group J" },
+            { id: 20, date: "June 16, 2026", time: "21:00", stage: "group", host: "USA", teamA: "Austria", flagA: "🇦🇹", teamB: "Jordan", flagB: "🇯🇴", venue: "Levi's Stadium", city: "San Francisco", group: "Group J" },
+            // Group K
+            { id: 21, date: "June 17, 2026", time: "12:00", stage: "group", host: "USA", teamA: "DR Congo", flagA: "🇨🇩", teamB: "Portugal", flagB: "🇵🇹", venue: "NRG Stadium", city: "Houston", group: "Group K" },
+            { id: 22, date: "June 17, 2026", time: "20:00", stage: "group", host: "MEX", teamA: "Uzbekistan", flagA: "🇺🇿", teamB: "Colombia", flagB: "🇨🇴", venue: "Estadio Azteca", city: "Mexico City", group: "Group K" },
+            // Group L
+            { id: 23, date: "June 17, 2026", time: "15:00", stage: "group", host: "USA", teamA: "England", flagA: "🏴\u200d󠁢󠁳󠁣󠁴󠁿", teamB: "Croatia", flagB: "🇭🇷", venue: "AT&T Stadium", city: "Dallas", group: "Group L" },
+            { id: 24, date: "June 17, 2026", time: "19:00", stage: "group", host: "CAN", teamA: "Ghana", flagA: "🇬🇭", teamB: "Panama", flagB: "🇵🇦", venue: "BMO Field", city: "Toronto", group: "Group L" },
             // Knockouts
-            { id: 13, date: "June 30, 2026", time: "18:00", stage: "knockout", host: "USA", teamA: "Winner Group A", flagA: "🏆", teamB: "Runner-up Group C", flagB: "⚽", venue: "SoFi Stadium", city: "Los Angeles", group: "Round of 32" },
-            { id: 14, date: "July 4, 2026", time: "17:00", stage: "knockout", host: "USA", teamA: "Winner R32 M1", flagA: "🏆", teamB: "Winner R32 M2", flagB: "🏆", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "Round of 16" },
-            { id: 15, date: "July 9, 2026", time: "16:00", stage: "knockout", host: "USA", teamA: "Quarter-finalist 1", flagA: "🏆", teamB: "Quarter-finalist 2", flagB: "🏆", venue: "Gillette Stadium", city: "Boston", group: "Quarter-finals" },
-            { id: 16, date: "July 14, 2026", time: "19:00", stage: "final", host: "USA", teamA: "Semi-finalist 1", flagA: "🏆", teamB: "Semi-finalist 2", flagB: "🏆", venue: "AT&T Stadium", city: "Dallas", group: "Semi-final 1" },
-            { id: 17, date: "July 15, 2026", time: "19:00", stage: "final", host: "USA", teamA: "Semi-finalist 3", flagA: "🏆", teamB: "Semi-finalist 4", flagB: "🏆", venue: "Mercedes-Benz Stadium", city: "Atlanta", group: "Semi-final 2" },
-            { id: 18, date: "July 18, 2026", time: "16:00", stage: "final", host: "USA", teamA: "Loser SF1", flagA: "⚽", teamB: "Loser SF2", flagB: "⚽", venue: "Hard Rock Stadium", city: "Miami", group: "Third-place Play-off" },
-            { id: 19, date: "July 19, 2026", time: "15:00", stage: "final", host: "USA", teamA: "Winner SF1", flagA: "🏆", teamB: "Winner SF2", flagB: "🏆", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "World Cup Final" }
+            { id: 25, date: "June 30, 2026", time: "18:00", stage: "knockout", host: "USA", teamA: "Winner Group A", flagA: "🏆", teamB: "Runner-up Group C", flagB: "⚽", venue: "SoFi Stadium", city: "Los Angeles", group: "Round of 32" },
+            { id: 26, date: "July 4, 2026", time: "17:00", stage: "knockout", host: "USA", teamA: "Winner R32 M1", flagA: "🏆", teamB: "Winner R32 M2", flagB: "🏆", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "Round of 16" },
+            { id: 27, date: "July 9, 2026", time: "16:00", stage: "knockout", host: "USA", teamA: "Quarter-finalist 1", flagA: "🏆", teamB: "Quarter-finalist 2", flagB: "🏆", venue: "Gillette Stadium", city: "Boston", group: "Quarter-finals" },
+            { id: 28, date: "July 14, 2026", time: "19:00", stage: "final", host: "USA", teamA: "Semi-finalist 1", flagA: "🏆", teamB: "Semi-finalist 2", flagB: "🏆", venue: "AT&T Stadium", city: "Dallas", group: "Semi-final 1" },
+            { id: 29, date: "July 15, 2026", time: "19:00", stage: "final", host: "USA", teamA: "Semi-finalist 3", flagA: "🏆", teamB: "Semi-finalist 4", flagB: "🏆", venue: "Mercedes-Benz Stadium", city: "Atlanta", group: "Semi-final 2" },
+            { id: 30, date: "July 18, 2026", time: "16:00", stage: "final", host: "USA", teamA: "Loser SF1", flagA: "⚽", teamB: "Loser SF2", flagB: "⚽", venue: "Hard Rock Stadium", city: "Miami", group: "Third-place Play-off" },
+            { id: 31, date: "July 19, 2026", time: "15:00", stage: "final", host: "USA", teamA: "Winner SF1", flagA: "🏆", teamB: "Winner SF2", flagB: "🏆", venue: "MetLife Stadium", city: "East Rutherford (NY/NJ)", group: "World Cup Final" }
         ];
 
         // Stadium Venues Details Database
@@ -1938,6 +1962,42 @@
                 opened: "1983 (Renovated)",
                 desc: "Canada's premier West Coast sports venue, featuring a retractable roof. Framed by Vancouver's False Creek, it is a landmark of British Columbia.",
                 image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=400&q=80"
+            },
+            "Guadalajara Stadium": {
+                city: "Guadalajara, Mexico 🇲🇽",
+                capacity: "48,071",
+                surface: "Natural Grass (Temporary)",
+                matches: "4 Group Stage Matches (4 Total)",
+                opened: "2010",
+                desc: "Known for its volcanic-inspired exterior design. Home to C.D. Guadalajara, featuring a unique grass field and state-of-the-art facilities.",
+                image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=400&q=80"
+            },
+            "Estadio BBVA": {
+                city: "Monterrey, Mexico 🇲🇽",
+                capacity: "53,500",
+                surface: "Natural Grass",
+                matches: "3 Group Stage, 1 Knockout (4 Total)",
+                opened: "2015",
+                desc: "Nicknamed 'El Gigante de Acero' (The Steel Giant) for its silver-clad facade, framed by the beautiful Cerro de la Silla mountain view.",
+                image: "https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=400&q=80"
+            },
+            "Philadelphia Stadium": {
+                city: "Philadelphia, USA 🇺🇸",
+                capacity: "69,796",
+                surface: "Natural Grass (Temporary)",
+                matches: "5 Group Stage, 1 Round of 16 (6 Total)",
+                opened: "2003",
+                desc: "A historic venue in the heart of East Coast sports. Designed with environmental sustainability features and open corners offering views of the Philadelphia skyline.",
+                image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=400&q=80"
+            },
+            "Arrowhead Stadium": {
+                city: "Kansas City, USA 🇺🇸",
+                capacity: "76,416",
+                surface: "Natural Grass",
+                matches: "4 Group Stage, 1 Knockout, 1 Quarter-final (6 Total)",
+                opened: "1972",
+                desc: "Holds the Guinness World Record for the loudest stadium in the world. Renowned for its tailgating culture and passionate sporting atmosphere.",
+                image: "https://images.unsplash.com/photo-1540747737956-37872ba68676?auto=format&fit=crop&w=400&q=80"
             }
         };
 
@@ -2112,33 +2172,33 @@
             grid.innerHTML = '';
 
             const groups = {
-                'A': ['Mexico', 'Ecuador', 'Poland', 'New Zealand'],
-                'B': ['Canada', 'Morocco', 'Ukraine', 'Iraq'],
-                'C': ['Argentina', 'Switzerland', 'Algeria', 'Honduras'],
-                'D': ['USA', 'Senegal', 'Austria', 'Iran'],
-                'E': ['Spain', 'South Korea', 'DR Congo', 'Costa Rica'],
-                'F': ['France', 'Japan', 'Turkey', 'Venezuela'],
-                'G': ['England', 'Egypt', 'Serbia', 'Jamaica'],
-                'H': ['Brazil', 'Australia', 'Sweden', 'UAE'],
-                'I': ['Germany', 'Cameroon', 'Romania', 'Uzbekistan'],
-                'J': ['Netherlands', 'Saudi Arabia', 'Scotland', 'Panama'],
-                'K': ['Portugal', 'Colombia', 'Greece', 'El Salvador'],
-                'L': ['Uruguay', 'Belgium', 'Norway', 'Czech Republic']
+                'A': ['Mexico', 'South Korea', 'South Africa', 'Czech Republic'],
+                'B': ['Switzerland', 'Canada', 'Qatar', 'Bosnia and Herzegovina'],
+                'C': ['Scotland', 'Brazil', 'Morocco', 'Haiti'],
+                'D': ['USA', 'Australia', 'Turkiye', 'Paraguay'],
+                'E': ['Germany', 'Ivory Coast', 'Ecuador', 'Curacao'],
+                'F': ['Sweden', 'Japan', 'Netherlands', 'Tunisia'],
+                'G': ['Belgium', 'Egypt', 'Iran', 'New Zealand'],
+                'H': ['Spain', 'Cape Verde', 'Saudi Arabia', 'Uruguay'],
+                'I': ['France', 'Iraq', 'Norway', 'Senegal'],
+                'J': ['Algeria', 'Argentina', 'Austria', 'Jordan'],
+                'K': ['Colombia', 'DR Congo', 'Portugal', 'Uzbekistan'],
+                'L': ['Croatia', 'England', 'Ghana', 'Panama']
             };
 
             const teamFlags = {
-                'Mexico': '🇲🇽', 'Ecuador': '🇪🇨', 'Poland': '🇵🇱', 'New Zealand': '🇳🇿',
-                'Canada': '🇨🇦', 'Morocco': '🇲🇦', 'Ukraine': '🇺🇦', 'Iraq': '🇮🇶',
-                'Argentina': '🇦🇷', 'Switzerland': '🇨🇭', 'Algeria': '🇩🇿', 'Honduras': '🇭🇳',
-                'USA': '🇺🇸', 'Senegal': '🇸🇳', 'Austria': '🇦🇹', 'Iran': '🇮🇷',
-                'Spain': '🇪🇸', 'South Korea': '🇰🇷', 'DR Congo': '🇨🇩', 'Costa Rica': '🇨🇷',
-                'France': '🇫🇷', 'Japan': '🇯🇵', 'Turkey': '🇹🇷', 'Venezuela': '🇻🇪',
-                'England': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Egypt': '🇪🇬', 'Serbia': '🇷🇸', 'Jamaica': '🇯🇲',
-                'Brazil': '🇧🇷', 'Australia': '🇦🇺', 'Sweden': '🇸🇪', 'UAE': '🇦🇪',
-                'Germany': '🇩🇪', 'Cameroon': '🇨🇲', 'Romania': '🇷🇴', 'Uzbekistan': '🇺🇿',
-                'Netherlands': '🇳🇱', 'Saudi Arabia': '🇸🇦', 'Scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'Panama': '🇵🇦',
-                'Portugal': '🇵🇹', 'Colombia': '🇨🇴', 'Greece': '🇬🇷', 'El Salvador': '🇸🇻',
-                'Uruguay': '🇺🇾', 'Belgium': '🇧🇪', 'Norway': '🇳🇴', 'Czech Republic': '🇨🇿'
+                'Mexico': '🇲🇽', 'South Korea': '🇰🇷', 'South Africa': '🇿🇦', 'Czech Republic': '🇨🇿',
+                'Switzerland': '🇨🇭', 'Canada': '🇨🇦', 'Qatar': '🇶🇦', 'Bosnia and Herzegovina': '🇧🇦',
+                'Scotland': '🏴\u200d󠁢󠁳󠁣󠁴󠁿', 'Brazil': '🇧🇷', 'Morocco': '🇲🇦', 'Haiti': '🇭🇹',
+                'USA': '🇺🇸', 'Australia': '🇦🇺', 'Turkiye': '🇹🇷', 'Paraguay': '🇵🇾',
+                'Germany': '🇩🇪', 'Ivory Coast': '🇨🇮', 'Ecuador': '🇪🇨', 'Curacao': '🇨🇼',
+                'Sweden': '🇸🇪', 'Japan': '🇯🇵', 'Netherlands': '🇳🇱', 'Tunisia': '🇹🇳',
+                'Belgium': '🇧🇪', 'Egypt': '🇪🇬', 'Iran': '🇮🇷', 'New Zealand': '🇳🇿',
+                'Spain': '🇪🇸', 'Cape Verde': '🇨🇻', 'Saudi Arabia': '🇸🇦', 'Uruguay': '🇺🇾',
+                'France': '🇫🇷', 'Iraq': '🇮🇶', 'Norway': '🇳🇴', 'Senegal': '🇸🇳',
+                'Algeria': '🇩🇿', 'Argentina': '🇦🇷', 'Austria': '🇦🇹', 'Jordan': '🇯🇴',
+                'Colombia': '🇨🇴', 'DR Congo': '🇨🇩', 'Portugal': '🇵🇹', 'Uzbekistan': '🇺🇿',
+                'Croatia': '🇭🇷', 'England': '🏴\u200d󠁢󠁳󠁣󠁴󠁿', 'Ghana': '🇬🇭', 'Panama': '🇵🇦'
             };
 
             const teamStats = {};
